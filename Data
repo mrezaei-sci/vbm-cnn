@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# fetch_adni.sh — download ADNI T1‑weighted MPRAGE scans
+
+echo "=== ADNI Data Fetch Script ==="
+echo "You must have an ADNI account (http://adni.loni.usc.edu)"
+echo
+
+# Prompt for credentials
+read -p "Enter your LONI username: " USER
+# Note: you might also prompt for password or use an API key depending on your setup
+
+# Example: using the LONI CLI (install with `pip install lonicli`)
+echo "Downloading T1‑weighted MPRAGE scans to data/raw/ …"
+mkdir -p data/raw
+lonicli download \
+  --username "$USER" \
+  --scan-type "MPRAGE" \
+  --output-dir "data/raw"
+
+echo "Done. Raw images are in data/raw/"
