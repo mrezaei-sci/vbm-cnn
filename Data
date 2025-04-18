@@ -1,11 +1,10 @@
-#!/usr/bin/env bash
 # fetch_adni.sh — download ADNI T1‑weighted MPRAGE scans
 
 echo "=== ADNI Data Fetch Script ==="
 echo "You must have an ADNI account (http://adni.loni.usc.edu)"
 echo
 
-# Prompt for credentials
+
 read -p "Enter your LONI username: " USER
 # Note: you might also prompt for password or use an API key depending on your setup
 
